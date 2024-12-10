@@ -48,9 +48,9 @@ export class CurrencyInput {
   }
 
   setOptions(options: CurrencyInputOptions): void {
-    this.init(options)
-    this.format(this.currencyFormat.format(this.validateValueRange(this.numberValue)))
-    this.onChange(this.getValue())
+    this.init(options);
+    this.format(this.currencyFormat.format(this.validateValueRange(this.numberValue)), this.options.hideNegligibleDecimalDigitsOnFocus);
+    this.onChange(this.getValue());
   }
 
   getValue(): CurrencyInputValue {
